@@ -32,7 +32,7 @@ const useremail=data.email
 if(data){
     bcrypt.compare(password, data.password,async(err, result)=> {
      if(result){
-        var token = jwt.sign({ authorId:data._dd }, 'masai');
+        var token = jwt.sign({ authorId:data._id }, 'masai');
         res.status(200).json({msg:"Login Successfully","token":token,username,useremail,date:new Date().toLocaleTimeString()})
      }else{
         res.status(400).json({msg:"Wrong password"})
