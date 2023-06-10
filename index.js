@@ -9,7 +9,7 @@ app.use(express.json())
 
 app.use("/user",userRouter)
 
-sf
+
 app.listen(8080,async()=>{
 
 try{
