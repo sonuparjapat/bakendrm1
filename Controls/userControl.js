@@ -35,7 +35,7 @@ if(data){
         var token = jwt.sign({ authorId:data._dd }, 'masai');
         res.status(200).json({msg:"Login Successfully","token":token,userdata:{username,useremail}})
      }else{
-        res.status(200).json({msg:"Wrong password"})
+        res.status(400).json({msg:"Wrong password"})
      }
     });
   
